@@ -1,0 +1,15 @@
+[package]
+name = "buidlland"
+version = "1.0.0"
+authors = []
+
+[addresses]
+buidlland = "0x60c6ff64736978689bbeb2f76cd04785272f985809dd4af9c3788fce886a2f8c"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
