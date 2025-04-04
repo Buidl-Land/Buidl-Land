@@ -488,7 +488,7 @@ const DashboardContent = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="relative">
               <h1 className="text-3xl font-bold sm:text-4xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primary/90 dark:to-secondary/90">
-                Dashboard Overview
+                Investment Portfolio
               </h1>
               <div className="absolute -bottom-2 left-0 w-1/2 h-1.5 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
             </div>
