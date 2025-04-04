@@ -3641,6 +3641,7 @@ __metadata:
     "@radix-ui/react-toggle-group": ^1.1.1
     "@radix-ui/react-tooltip": ^1.1.6
     "@rainbow-me/rainbowkit": 2.1.6
+    "@splinetool/react-spline": ^4.0.0
     "@tanstack/react-query": ~5.59.15
     "@trivago/prettier-plugin-sort-imports": ~4.3.0
     "@tsparticles/engine": ^3.8.1
@@ -3713,6 +3714,26 @@ __metadata:
   version: 3.1.2
   resolution: "@socket.io/component-emitter@npm:3.1.2"
   checksum: 89888f00699eb34e3070624eb7b8161fa29f064aeb1389a48f02195d55dd7c52a504e52160016859f6d6dffddd54324623cdd47fd34b3d46f9ed96c18c456edc
+  languageName: node
+  linkType: hard
+
+"@splinetool/react-spline@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@splinetool/react-spline@npm:4.0.0"
+  dependencies:
+    blurhash: 2.0.5
+    lodash.debounce: 4.0.8
+    react-merge-refs: 2.1.1
+    thumbhash: 0.1.1
+  peerDependencies:
+    "@splinetool/runtime": "*"
+    next: ">=14.2.0"
+    react: "*"
+    react-dom: "*"
+  peerDependenciesMeta:
+    next:
+      optional: true
+  checksum: e014657460f4759f5bbf8c507f0c47bc0a48cedd9301cba26c8729b459f9a967a91635ea8aa8093e0992f52dfae1144af528771deea92cc1a97fa6ad4fe99424
   languageName: node
   linkType: hard
 
@@ -6330,6 +6351,13 @@ __metadata:
   version: 1.2.0
   resolution: "blo@npm:1.2.0"
   checksum: be7dc5f3047d538c0038b469c309440e5b7de872ee811cc7ca97005b6b534a01dbf461150145f2f09524aeda6923197ea31290fbe9865cb8cb32152b3caf3dc7
+  languageName: node
+  linkType: hard
+
+"blurhash@npm:2.0.5":
+  version: 2.0.5
+  resolution: "blurhash@npm:2.0.5"
+  checksum: aa4d6855bbaae116065b118a7b1e889648c15047e72048c28bab3db426a042ce1dc032a30c55a52da6140c314534841b984ab11cc68303668dde446d6ca53bc6
   languageName: node
   linkType: hard
 
@@ -10812,7 +10840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.debounce@npm:^4.0.8":
+"lodash.debounce@npm:4.0.8, lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: a3f527d22c548f43ae31c861ada88b2637eb48ac6aa3eb56e82d44917971b8aa96fbb37aa60efea674dc4ee8c42074f90f7b1f772e9db375435f6c83a19b3bc6
@@ -12823,6 +12851,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-merge-refs@npm:2.1.1":
+  version: 2.1.1
+  resolution: "react-merge-refs@npm:2.1.1"
+  checksum: 40564bc4c16520ef830d4fe7a2bd298c23a42d644a8fcb2353cdc6cf16aa82eac681c554df4c849397b25af9dbe728086566e1a01f65f95d2301dc8fc8f6809f
+  languageName: node
+  linkType: hard
+
 "react-native-webview@npm:^11.26.0":
   version: 11.26.1
   resolution: "react-native-webview@npm:11.26.1"
@@ -14313,6 +14348,13 @@ __metadata:
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: a38c3e059853c494af95d50c072b83f8b676a9ba2818dcc5b108ef252230735c54e0185437618596c790bbba8fcdaef5b290405981ffa09dce67b1f1bf190cbd
+  languageName: node
+  linkType: hard
+
+"thumbhash@npm:0.1.1":
+  version: 0.1.1
+  resolution: "thumbhash@npm:0.1.1"
+  checksum: cd97dc8faecb82cf872ca1be89488f7b6b4a14d4faa3b42e5e86a553d1f6f71d6ed6f561c0ddbbb54e064a221f882e909b6ad24af2e21fb87a0741df28fb2dbd
   languageName: node
   linkType: hard
 
