@@ -10,19 +10,20 @@ import { IdeaPulseLogo } from "~~/components/assets/IdeaPulseLogo";
  */
 export const AskAgentButton = () => {
   return (
-    <div className="fixed right-8 bottom-24 z-50">
-      <div className="tooltip tooltip-left" data-tip="Ask our AI assistant">
-        <button className="btn btn-circle btn-primary shadow-lg">
-          <div className="flex items-center justify-center w-full h-full">
-            <span className="relative group inline-block">
-              <SparklesIcon className="h-5 w-5 text-white" />
-              Ask Agent
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white/70 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-            </span>
-          </div>
-        </button>
-      </div>
+    <div className="fixed flex justify-end items-center w-full z-20 p-4 bottom-0 right-0 pointer-events-none">
+    <div className={`relative pointer-events-auto group}`}>
+      <div className="absolute inset-0 bg-gradient-to-r from-accent/40 to-secondary/40 rounded-full blur-md opacity-50 group-hover:opacity-80 transition-all duration-300 animate-pulse"></div>
+      <button className="btn bg-gradient-to-r from-accent to-secondary hover:from-secondary hover:to-accent text-white border-none rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-medium relative z-10 p-0 h-10 min-h-0 overflow-hidden">
+        <div className="flex items-center justify-center gap-2 px-4 h-full">
+          <ChatBubbleLeftRightIcon className="h-5 w-5 group-hover:animate-bounce flex-shrink-0" />
+          <span className="relative inline-block leading-tight text-center">
+            Ask Agent
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white/70 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          </span>
+        </div>
+      </button>
     </div>
+  </div>
   );
 };
 

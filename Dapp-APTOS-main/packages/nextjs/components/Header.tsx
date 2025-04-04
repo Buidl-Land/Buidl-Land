@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { IdeaPulseLogo } from "~~/components/assets/IdeaPulseLogo";
-import { useOutsideClick } from "~~/hooks/scaffold-eth";
 import { SwitchTheme } from "~~/components/SwitchTheme";
 import { WalletSelector } from "./wallet/WalletSelector";
 
@@ -75,12 +74,18 @@ export const Header = () => {
   const burgerMenuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  useOutsideClick(
-    burgerMenuRef,
-    useCallback(() => {
-      setIsDrawerOpen(false);
-    }, []),
-  );
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (burgerMenuRef.current && !burgerMenuRef.current.contains(event.target as Node)) {
+        setIsDrawerOpen(false);
+      }
+    };
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [burgerMenuRef]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,7 +111,7 @@ export const Header = () => {
           <Link href="/" passHref className="flex items-center gap-1">
             <IdeaPulseLogo />
             <div className="flex flex-col">
-              <span className="text-lg font-bold leading-tight">IdeaPulse</span>
+              <span className="text-lg font-bold leading-tight">BuidlLand</span>
             </div>
           </Link>
           <div className="hidden sm:flex items-center gap-4 ml-6">

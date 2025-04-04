@@ -9,7 +9,7 @@ import {
   CoinType,
 } from "../constants";
 
-const BuidllandTxFunction = () => {
+export const BuidllandTxFunction = () => {
   const aptos = new Aptos(config);
   const { account, signAndSubmitTransaction } = useWallet();
 
@@ -37,7 +37,6 @@ const BuidllandTxFunction = () => {
       data: {
         function: `${MODULE_ADDRESS}::${MockCrowdfundingModule.MODULE_NAME}::${MockCrowdfundingModule.FUNCTIONS.ASSIGN_TASK}` as `${string}::${string}::${string}`,
         functionArguments: [task_id],
-        typeArguments: [CoinType.USDC]
       },
     });
     try {
@@ -87,5 +86,13 @@ const BuidllandTxFunction = () => {
 
         return crowd_funding_data;
     }
-}
+
+  return {
+    getTaskState,
+    assignTask,
+    depositFunding,
+    startTask,
+    getCrowdFunding
+  };
+};
 
